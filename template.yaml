@@ -32,7 +32,7 @@ spec:
           ui:field: RepoUrlPicker
           ui:options:
             allowedHosts:
-              - git.tools.telstra.com
+              - github.com
 
   # here's the steps that are executed in series in the scaffolder backend
   steps:
@@ -53,9 +53,9 @@ spec:
 
     - id: publish
       name: Publish
-      action: publish:bitbucket
+      action: publish:github
       input:
-        allowedHosts: ['git.tools.telstra.com']
+        allowedHosts: ['github.com']
         description: 'This is {{ parameters.name }}'
         repoUrl: '{{ parameters.repoUrl }}'
 
